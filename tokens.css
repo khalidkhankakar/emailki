@@ -1,0 +1,54 @@
+/* Hallmark · pre-emit critique: P5 H4 E4 S4 R4 V5
+ * Hallmark · genre: playful · macrostructure: Marquee Hero + Component Playground · theme: custom warm/off-register · enrichment: Tier-A CSS product composition · nav: N7 · footer: Ft5
+ */
+:root {
+  --color-paper: oklch(0.9885 0.0057 84.5659);
+  --color-paper-2: oklch(0.9686 0.0091 78.2818);
+  --color-paper-3: oklch(0.9363 0.0218 83.2637);
+  --color-paper-4: oklch(0.9 0.05 74.9889);
+  --color-ink: oklch(0.2161 0.0061 56.0434);
+  --color-muted: oklch(0.5534 0.0116 58.0708);
+  --color-neutral: oklch(0.366 0.0251 49.6085);
+  --color-rule: oklch(0.8866 0.0404 89.6994);
+  --color-accent: oklch(0.5553 0.1455 48.9975);
+  --color-accent-2: oklch(0.3598 0.0497 229.3202);
+  --color-accent-3: oklch(0.6806 0.1423 75.834);
+  --color-accent-ink: oklch(1 0 0);
+  --color-focus: oklch(0.7049 0.1867 47.6044);
+  --font-display: var(--font-serif);
+  --font-body: var(--font-sans);
+  --font-code: var(--font-mono);
+  --font-wordmark: var(--font-mono);
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 9rem;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-md: 1.25rem;
+  --text-lg: 1.5625rem;
+  --text-xl: 1.953rem;
+  --text-2xl: 2.441rem;
+  --text-3xl: 3.052rem;
+  --text-display-s: clamp(2.75rem, 4vw + 0.75rem, 4.75rem);
+  --text-display: clamp(3.2rem, 8vw + 0.25rem, 8.5rem);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long: 420ms;
+  --rule-hairline: 1px solid var(--color-rule);
+  --radius-sm: 0.3rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --shadow-soft: 0 10px 26px -18px var(--color-accent);
+}

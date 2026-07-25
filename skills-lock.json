@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "skills": {
+    "hallmark": {
+      "source": "nutlope/hallmark",
+      "sourceType": "github",
+      "skillPath": "skills/hallmark/SKILL.md",
+      "computedHash": "d3a20aae61e43793d74932c92b63bcad5882e73ec1c8545b858910fd95b25136"
+    },
+    "unlayer-elements": {
+      "source": "unlayer/unlayer-skills",
+      "sourceType": "github",
+      "skillPath": "unlayer-elements/SKILL.md",
+      "computedHash": "b4210574cc71d70e64a47ef5bafb8f981a66faf610fcfdb0edcea2912e6d96dd"
+    },
+    "unlayer-export": {
+      "source": "unlayer/unlayer-skills",
+      "sourceType": "github",
+      "skillPath": "unlayer-export/SKILL.md",
+      "computedHash": "6bef317ac7fb6fd96cfb20b3dedf1b0fe575481c2e69242888df49bc0da8fce2"
+    }
+  }
+}
