@@ -19,6 +19,11 @@ import { TrialReminder } from "@/components/templates/TrialReminder";
 import { TrialStarted } from "@/components/templates/TrialStarted";
 import { VerifyEmail } from "@/components/templates/VerifyEmail";
 import { Welcome } from "@/components/templates/Welcome";
+import { RenewalReminder } from "@/components/templates/RenewalReminder";
+import { Receipt } from "@/components/templates/Receipt";
+import { DownloadConfirmation } from "@/components/templates/DownloadConfirmation";
+import { AccountDeleted } from "@/components/templates/AccountDeleted";
+import { EmailChanged } from "@/components/templates/EmailChanged";
 
 const templateRegistry = [
   { id: "welcome", name: "Welcome", file: "Welcome.tsx", component: Welcome },
@@ -100,6 +105,36 @@ const templateRegistry = [
     name: "NPS Survey",
     file: "NPSSurvey.tsx",
     component: NPSSurvey,
+  },
+  {
+    id: "renewal-reminder",
+    name: "Renewal Reminder",
+    file: "RenewalReminder.tsx",
+    component: RenewalReminder,
+  },
+  {
+    id:"download-confirmation",
+    name: "Download Confirmation",
+    file: "DownloadConfirmation.tsx",
+    component: DownloadConfirmation,
+  },
+  {
+    id: "account-deleted",
+    name: "Account Deleted",
+    file: "AccountDeleted.tsx",
+    component: AccountDeleted,
+  },
+  {
+    id: "email-changed",
+    name: "Email Changed",
+    file: "EmailChanged.tsx",
+    component: EmailChanged,
+  },
+  {
+    id: "receipt",
+    name: "Receipt",
+    file: "Receipt.tsx",
+    component: Receipt,
   },
   {
     id: "customer-feedback",
