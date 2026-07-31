@@ -85,7 +85,7 @@ const highlightSerif = (text: string): string =>
 
 export function TrialStarted() {
   const detailRows: DetailRow[] = [
-    { label: "Plan",         value: "abc Pro",  highlight: true },
+    { label: "Plan",         value: "Emailki Pro",  highlight: true },
     { label: "Trial period", value: "14 days" },
     { label: "Started",      value: "Jul 23, 2025" },
     { label: "Expires",      value: "Aug 6, 2025" },
@@ -106,7 +106,7 @@ export function TrialStarted() {
       contentWidth="600px"
       contentAlign="center"
       fontFamily={fontSans}
-      previewText="Your 14-day abc Pro trial has started — here's everything you've unlocked."
+      previewText="Your 14-day Emailki Pro trial has started — here's everything you've unlocked."
     >
 
       {/* ── 1. TOP ACCENT STRIP (4px amber bar) ─────────────────────────────── */}
@@ -137,7 +137,7 @@ export function TrialStarted() {
           {/* Main headline */}
           <Heading
             headingType="h1"
-            text="Welcome to abc Pro"
+            text="Welcome to Emailki Pro"
             fontSize="34px"
             fontWeight={700}
             color="#ffffff"
@@ -148,7 +148,7 @@ export function TrialStarted() {
           {/* Subhead — serif for warmth on dark bg */}
           <Paragraph
             html={serifBody(
-              `You now have full access to everything ${boldSans("abc Pro")} has to offer — free for 14 days. No credit card charged until your trial ends.`,
+              `You now have full access to everything ${boldSans("Emailki Pro")} has to offer — free for 14 days. No credit card charged until your trial ends.`,
               BANNER_MUTED
             )}
             fontSize="15px"
@@ -351,6 +351,7 @@ export function TrialStarted() {
         layout={ColumnLayouts.ThreeEqual}
         backgroundColor={CARD}
         padding="12px 40px 8px 40px"
+        
       >
         {perks.slice(0, 3).map((perk) => (
           <Column
@@ -364,6 +365,7 @@ export function TrialStarted() {
               borderTopColor: HAIRLINE,
             }}
           >
+            
             <Heading
               headingType="h3"
               text={`${perk.icon}  ${perk.title}`}
@@ -395,6 +397,7 @@ export function TrialStarted() {
             backgroundColor={BG}
             borderRadius="8px"
             padding="20px 16px"
+            
             border={{
               borderTopWidth: "1px",
               borderTopStyle: "solid",
@@ -649,7 +652,7 @@ export function TrialStarted() {
       <Row layout={ColumnLayouts.OneColumn} padding="4px 48px 4px 48px">
         <Column>
           <Paragraph
-            html={serifBody("© 2025 abc. All rights reserved.", SUBTLE)}
+            html={serifBody("© 2025 Emailki. All rights reserved.", SUBTLE)}
             fontSize="12px"
             color={SUBTLE}
             textAlign="center"

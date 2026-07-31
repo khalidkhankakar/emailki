@@ -79,7 +79,7 @@ export function MagicLink() {
     { label: "Requested at", value: "Jul 23, 2025 · 02:45 PM" },
     { label: "Sent to",      value: "kh***@gmail.com" },
     { label: "Device",       value: "Chrome on macOS" },
-    { label: "Location",     value: "Faisalabad, PK" },
+    { label: "Location",     value: "KSF, PK" },
   ];
 
   const steps: StepCard[] = [
@@ -94,7 +94,7 @@ export function MagicLink() {
       contentWidth="600px"
       contentAlign="center"
       fontFamily={fontSans}
-      previewText="Your magic sign-in link for abc — tap to sign in instantly."
+      previewText="Your magic sign-in link for Emailki — tap to sign in instantly."
     >
 
       {/* ── 1. TOP ACCENT STRIP (4px amber bar) ─────────────────────────────── */}
@@ -114,7 +114,7 @@ export function MagicLink() {
         <Column padding="0px">
           <Heading
             headingType="h2"
-            text="abc"
+            text="Emailki"
             fontSize="26px"
             fontWeight={700}
             color={BRAND}
@@ -156,7 +156,7 @@ export function MagicLink() {
           {/* Primary headline */}
           <Heading
             headingType="h1"
-            text="Sign in to abc"
+            text="Sign in to Emailki"
             fontSize="32px"
             fontWeight={700}
             color="#ffffff"
@@ -197,7 +197,7 @@ export function MagicLink() {
             borderRadius="6px"
             textAlign="center"
           >
-            Sign In to abc
+            Sign In to Emailki
           </Button>
         </Column>
       </Row>
@@ -343,7 +343,7 @@ export function MagicLink() {
             }}
           >
             <Paragraph
-              html={`<a href="#" style="color:${LINK};word-break:break-all;font-family:'Fira Code',monospace;font-size:12px;">https://abc.app/magic?token=ml_eyJhbGci…9zX2lk</a>`}
+              html={`<a href="#" style="color:${LINK};word-break:break-all;font-family:'Fira Code',monospace;font-size:12px;">https://Emailki.app/magic?token=ml_eyJhbGci…9zX2lk</a>`}
               fontSize="12px"
               color={LINK}
               textAlign="left"
@@ -510,7 +510,7 @@ export function MagicLink() {
       <Row layout={ColumnLayouts.OneColumn} padding="4px 48px 4px 48px">
         <Column>
           <Paragraph
-            html={serifBody("© 2025 abc. All rights reserved.", SUBTLE)}
+            html={serifBody("© 2025 Emailki. All rights reserved.", SUBTLE)}
             fontSize="12px"
             color={SUBTLE}
             textAlign="center"

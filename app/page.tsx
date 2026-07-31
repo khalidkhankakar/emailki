@@ -8,9 +8,7 @@ const HomePage = () => {
           emailki
         </Link>
         <nav className="site-nav-links" aria-label="Primary">
-          <a href="#templates">Templates</a>
-          <a href="#system">System</a>
-          <Link href="/dashboard/dashboard">Open</Link>
+          <Link href="/templates">Templates</Link>
         </nav>
       </header>
 
@@ -50,7 +48,11 @@ const HomePage = () => {
                 </div>
               </div>
               <pre className="hero-code-snippet">
-                <code>{`<EmailLayout title="Welcome" />`}</code>
+                <code>{`import {Email} from @unlayer/react-elements`}</code>
+              </pre>
+              <pre className="hero-code-snippet">
+                <code>{`<Email title="Welcome" />`}</code>
+                <code>{`</Email>`}</code>
               </pre>
             </div>
           </div>
@@ -65,7 +67,7 @@ const HomePage = () => {
             @unlayer/react-elements. It keeps preview and source beside each
             other, so the template never becomes a black box.
           </p>
-          <Link className="primary-action" href="/dashboard/dashboard">
+          <Link className="primary-action" href="/templates">
             Browse templates
           </Link>
         </div>
@@ -117,7 +119,7 @@ const HomePage = () => {
         <p>Small emails deserve a real room to work in.</p>
         <div>
           <span className="site-wordmark">emailki</span>
-          <Link href="/dashboard/dashboard">Open workbench</Link>
+          <Link href="/templates">Open workbench</Link>
         </div>
       </footer>
     </main>

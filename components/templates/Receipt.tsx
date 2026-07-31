@@ -57,7 +57,7 @@ export function Receipt() {
       contentWidth="600px"
       contentAlign="center"
       fontFamily={serifFont}
-      previewText="Your abc receipt — $29.00 · Receipt #REC-2025-0082 · Aug 6, 2025."
+      previewText="Your Emailki receipt — $29.00 · Receipt #REC-2025-0082 · Aug 6, 2025."
     >
 
       {/* ── 1. GREEN CONFIRMED BANNER ────────────────────────────────────────── */}
@@ -144,7 +144,7 @@ export function Receipt() {
         <Column padding="0px">
           <Heading
             headingType="h2"
-            text="abc"
+            text="Emailki"
             fontSize="22px"
             fontWeight={900}
             color={INK}
@@ -218,7 +218,7 @@ export function Receipt() {
           padding="16px 0px"
           border={{ borderBottomWidth: "1px", borderBottomStyle: "solid", borderBottomColor: BORDER }}
         >
-          <Paragraph html={`<b style="color:${INK}">abc Pro — Monthly Subscription</b>`} fontSize="14px" color={INK} textAlign="left" lineHeight="145%" fontFamily={serifFont} />
+          <Paragraph html={`<b style="color:${INK}">Emailki Pro — Monthly Subscription</b>`} fontSize="14px" color={INK} textAlign="left" lineHeight="145%" fontFamily={serifFont} />
           <Paragraph html="Billing period: Aug 6 – Sep 5, 2025" fontSize="12px" color={SUBTLE} textAlign="left" lineHeight="145%" fontFamily={sansFont} />
           <Paragraph html="1 × $29.00" fontSize="12px" color={MUTED_FG} textAlign="left" lineHeight="145%" fontFamily={sansFont} />
         </Column>
@@ -450,7 +450,7 @@ export function Receipt() {
       <Row layout={ColumnLayouts.OneColumn} padding="20px 40px 8px 40px">
         <Column>
           <Paragraph
-            html="abc Inc. · 123 Market St, San Francisco, CA 94105 · billing@abc.app"
+            html="Emailki Inc. · 123 Market St, San Francisco, CA 94105 · billing@Emailki.app"
             fontSize="12px"
             color={SUBTLE}
             textAlign="center"
@@ -462,7 +462,7 @@ export function Receipt() {
       <Row layout={ColumnLayouts.OneColumn} padding="4px 40px 4px 40px">
         <Column>
           <Paragraph
-            html="© 2025 abc. All rights reserved. This receipt was generated automatically."
+            html="© 2025 Emailki. All rights reserved. This receipt was generated automatically."
             fontSize="12px"
             color={SUBTLE}
             textAlign="center"

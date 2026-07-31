@@ -54,7 +54,7 @@ export function TrialEnding() {
       contentWidth="600px"
       contentAlign="center"
       fontFamily={uiFont}
-      previewText="Today is your last day — keep your abc Pro access before midnight."
+      previewText="Today is your last day — keep your Emailki Pro access before midnight."
     >
 
       {/* ── 1. ORANGE HERO BANNER — "TODAY IS YOUR LAST DAY" ──────────────── */}
@@ -87,7 +87,7 @@ export function TrialEnding() {
           />
           {/* Subhead */}
           <Paragraph
-            html={`Your <b style="color:${WHITE}">abc Pro</b> trial expires at <b style="color:${WHITE}">midnight tonight</b>. Upgrade now to keep everything — or your account moves to the free plan.`}
+            html={`Your <b style="color:${WHITE}">Emailki Pro</b> trial expires at <b style="color:${WHITE}">midnight tonight</b>. Upgrade now to keep everything — or your account moves to the free plan.`}
             fontSize="15px"
             color="#FED7AA"
             textAlign="center"
@@ -143,7 +143,7 @@ export function TrialEnding() {
         <Column padding="0px">
           <Heading
             headingType="h2"
-            text="abc"
+            text="Emailki"
             fontSize="22px"
             fontWeight={900}
             color={INK}
@@ -294,7 +294,7 @@ export function TrialEnding() {
         >
           <Heading
             headingType="h3"
-            text="✦  abc Pro"
+            text="✦  Emailki Pro"
             fontSize="13px"
             fontWeight={700}
             color={BRAND}
@@ -705,7 +705,7 @@ export function TrialEnding() {
       <Row layout={ColumnLayouts.OneColumn} padding="4px 40px 4px 40px">
         <Column>
           <Paragraph
-            html="© 2025 abc. All rights reserved."
+            html="© 2025 Emailki. All rights reserved."
             fontSize="12px"
             color={SUBTLE}
             textAlign="center"

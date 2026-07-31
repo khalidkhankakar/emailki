@@ -76,7 +76,7 @@ const highlightSerif = (text: string): string =>
 export function SubscriptionActivated() {
   const receiptRows: DetailRow[] = [
     { label: "Invoice",        value: "#INV-2025-0081" },
-    { label: "Plan",           value: "abc Pro — Monthly", highlight: true },
+    { label: "Plan",           value: "Emailki Pro — Monthly", highlight: true },
     { label: "Date",           value: "Aug 6, 2025" },
     { label: "Payment method", value: "Visa •••• 4242" },
   ];
@@ -102,7 +102,7 @@ export function SubscriptionActivated() {
       contentWidth="600px"
       contentAlign="center"
       fontFamily={fontSans}
-      previewText="Welcome to abc Pro — your subscription is active and your receipt is inside."
+      previewText="Welcome to Emailki Pro — your subscription is active and your receipt is inside."
     >
 
       {/* ── 1. TOP ACCENT STRIP (4px amber bar) ─────────────────────────────── */}
@@ -141,7 +141,7 @@ export function SubscriptionActivated() {
           />
           <Paragraph
             html={serifBody(
-              `Welcome to ${boldSans("abc Pro")}. Your subscription is active and your full access is ready — right now.`,
+              `Welcome to ${boldSans("Emailki Pro")}. Your subscription is active and your full access is ready — right now.`,
               "#d4c4b0"
             )}
             fontSize="15px"
@@ -190,7 +190,7 @@ export function SubscriptionActivated() {
         <Column padding="0px">
           <Heading
             headingType="h2"
-            text="abc"
+            text="Emailki"
             fontSize="26px"
             fontWeight={700}
             color={BRAND}
@@ -668,7 +668,7 @@ export function SubscriptionActivated() {
       <Row layout={ColumnLayouts.OneColumn} padding="4px 48px 4px 48px">
         <Column>
           <Paragraph
-            html={serifBody("© 2025 abc. All rights reserved.", SUBTLE)}
+            html={serifBody("© 2025 Emailki. All rights reserved.", SUBTLE)}
             fontSize="12px"
             color={SUBTLE}
             textAlign="center"

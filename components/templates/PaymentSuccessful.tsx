@@ -70,7 +70,7 @@ const highlightSerif = (text: string): string =>
 export function PaymentSuccessful() {
   const receiptRows: DetailRow[] = [
     { label: "Invoice",        value: "#INV-2025-0082" },
-    { label: "Plan",           value: "abc Pro — Monthly", highlight: true },
+    { label: "Plan",           value: "Emailki Pro — Monthly", highlight: true },
     { label: "Billing period", value: "Aug 6 – Sep 5, 2025" },
     { label: "Subtotal",       value: "$29.00" },
     { label: "Tax",            value: "$0.00" },
@@ -88,7 +88,7 @@ export function PaymentSuccessful() {
       contentWidth="600px"
       contentAlign="center"
       fontFamily={fontSans}
-      previewText="Payment confirmed — your abc Pro receipt for $29.00 is inside."
+      previewText="Payment confirmed — your Emailki Pro receipt for $29.00 is inside."
     >
 
       {/* ── 1. TOP ACCENT STRIP (4px amber bar) ─────────────────────────────── */}
@@ -210,7 +210,7 @@ export function PaymentSuccessful() {
         <Column padding="0px">
           <Heading
             headingType="h2"
-            text="abc"
+            text="Emailki"
             fontSize="26px"
             fontWeight={700}
             color={BRAND}
@@ -502,7 +502,7 @@ export function PaymentSuccessful() {
       <Row layout={ColumnLayouts.OneColumn} padding="4px 48px 4px 48px">
         <Column>
           <Paragraph
-            html={serifBody("© 2025 abc. All rights reserved.", SUBTLE)}
+            html={serifBody("© 2025 Emailki. All rights reserved.", SUBTLE)}
             fontSize="12px"
             color={SUBTLE}
             textAlign="center"

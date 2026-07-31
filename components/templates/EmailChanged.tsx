@@ -60,14 +60,14 @@ export function EmailChanged() {
       contentWidth="600px"
       contentAlign="center"
       fontFamily={serifFont}
-      previewText="Security notice — the email address on your abc account was changed on Aug 6, 2025."
+      previewText="Security notice — the email address on your Emailki account was changed on Aug 6, 2025."
     >
 
       {/* ── 1. AMBER SECURITY BAR ────────────────────────────────────────────── */}
       <Row layout={ColumnLayouts.OneColumn} backgroundColor={AMBER_DARK} padding="10px 40px">
         <Column>
           <Paragraph
-            html={`<b style="color:${WHITE}">⚠ Security notice</b> <span style="color:${AMBER_TEXT}"> — the email address on your abc account was changed.</span>`}
+            html={`<b style="color:${WHITE}">⚠ Security notice</b> <span style="color:${AMBER_TEXT}"> — the email address on your Emailki account was changed.</span>`}
             fontSize="13px"
             color={WHITE}
             textAlign="center"
@@ -80,7 +80,7 @@ export function EmailChanged() {
       {/* ── 2. HEADER ───────────────────────────────────────────────────────── */}
       <Row layout={ColumnLayouts.TwoEqual} backgroundColor={WHITE} padding="24px 40px 20px 40px">
         <Column padding="0px">
-          <Heading headingType="h2" text="abc" fontSize="22px" fontWeight={900} color={INK} textAlign="left" lineHeight="1.2" letterSpacing="0.02em" fontFamily={sansFont} />
+          <Heading headingType="h2" text="Emailki" fontSize="22px" fontWeight={900} color={INK} textAlign="left" lineHeight="1.2" letterSpacing="0.02em" fontFamily={sansFont} />
         </Column>
         <Column padding="4px 0px 0px 0px">
           <Paragraph
@@ -113,7 +113,7 @@ export function EmailChanged() {
             fontFamily={serifFont}
           />
           <Paragraph
-            html="The email address associated with your abc account was updated on <b>Aug 6, 2025 at 10:22 AM</b>. Review the details below."
+            html="The email address associated with your Emailki account was updated on <b>Aug 6, 2025 at 10:22 AM</b>. Review the details below."
             fontSize="15px"
             color={MUTED_FG}
             textAlign="left"
@@ -201,7 +201,7 @@ export function EmailChanged() {
           <Paragraph html="Location" fontSize="13px" color={MUTED_FG} lineHeight="140%" fontFamily={sansFont} />
         </Column>
         <Column padding="13px 0px" border={{ borderBottomWidth: "1px", borderBottomStyle: "solid", borderBottomColor: BORDER }}>
-          <Paragraph html="<b>Faisalabad, PK</b>" fontSize="13px" color={INK} textAlign="right" lineHeight="140%" fontFamily={sansFont} />
+          <Paragraph html="<b>KSF, PK</b>" fontSize="13px" color={INK} textAlign="right" lineHeight="140%" fontFamily={sansFont} />
         </Column>
       </Row>
 
@@ -358,7 +358,7 @@ export function EmailChanged() {
             fontFamily={sansFont}
           />
           <Paragraph
-            html={`Contact our security team immediately at <a href="mailto:security@abc.app" style="color:${RED}; font-weight:600;">security@abc.app</a> or use the button above. We respond within 1 hour.`}
+            html={`Contact our security team immediately at <a href="mailto:security@Emailki.app" style="color:${RED}; font-weight:600;">security@Emailki.app</a> or use the button above. We respond within 1 hour.`}
             fontSize="13px"
             color={MUTED_FG}
             textAlign="left"
@@ -374,13 +374,13 @@ export function EmailChanged() {
       </Row>
       <Row layout={ColumnLayouts.OneColumn} padding="20px 40px 4px 40px">
         <Column>
-          <Paragraph html="© 2025 abc. All rights reserved." fontSize="12px" color={SUBTLE} textAlign="center" lineHeight="150%" fontFamily={sansFont} />
+          <Paragraph html="© 2025 Emailki. All rights reserved." fontSize="12px" color={SUBTLE} textAlign="center" lineHeight="150%" fontFamily={sansFont} />
         </Column>
       </Row>
       <Row layout={ColumnLayouts.ThreeEqual} padding="8px 40px 32px 40px">
         <Column><Paragraph html={`<a href="#" style="color:${LINK}; text-decoration:none;">Privacy Policy</a>`} fontSize="12px" color={SUBTLE} textAlign="center" lineHeight="150%" fontFamily={sansFont} /></Column>
         <Column><Paragraph html={`<a href="#" style="color:${LINK}; text-decoration:none;">Account Settings</a>`} fontSize="12px" color={SUBTLE} textAlign="center" lineHeight="150%" fontFamily={sansFont} /></Column>
-        <Column><Paragraph html={`<a href="mailto:security@abc.app" style="color:${LINK}; text-decoration:none;">Security Team</a>`} fontSize="12px" color={SUBTLE} textAlign="center" lineHeight="150%" fontFamily={sansFont} /></Column>
+        <Column><Paragraph html={`<a href="mailto:security@Emailki.app" style="color:${LINK}; text-decoration:none;">Security Team</a>`} fontSize="12px" color={SUBTLE} textAlign="center" lineHeight="150%" fontFamily={sansFont} /></Column>
       </Row>
 
     </Email>

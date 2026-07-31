@@ -61,14 +61,14 @@ export function AccountDeleted() {
       contentWidth="600px"
       contentAlign="center"
       fontFamily={serifFont}
-      previewText="Your abc account has been deleted. Your data has been removed — you have 30 days to reactivate."
+      previewText="Your Emailki account has been deleted. Your data has been removed — you have 30 days to reactivate."
     >
 
       {/* ── 1. SLATE TOP BAR — neutral, not alarming ────────────────────────── */}
       <Row layout={ColumnLayouts.OneColumn} backgroundColor={SLATE} padding="10px 40px">
         <Column>
           <Paragraph
-            html={`<b style="color:${WHITE}">Your abc account has been deleted.</b> <span style="color:#cbd5e1"> You have 30 days to reactivate if you change your mind.</span>`}
+            html={`<b style="color:${WHITE}">Your Emailki account has been deleted.</b> <span style="color:#cbd5e1"> You have 30 days to reactivate if you change your mind.</span>`}
             fontSize="13px"
             color={WHITE}
             textAlign="center"
@@ -81,7 +81,7 @@ export function AccountDeleted() {
       {/* ── 2. HEADER ───────────────────────────────────────────────────────── */}
       <Row layout={ColumnLayouts.TwoEqual} backgroundColor={WHITE} padding="24px 40px 20px 40px">
         <Column padding="0px">
-          <Heading headingType="h2" text="abc" fontSize="22px" fontWeight={900} color={INK} textAlign="left" lineHeight="1.2" letterSpacing="0.02em" fontFamily={sansFont} />
+          <Heading headingType="h2" text="Emailki" fontSize="22px" fontWeight={900} color={INK} textAlign="left" lineHeight="1.2" letterSpacing="0.02em" fontFamily={sansFont} />
         </Column>
         <Column padding="4px 0px 0px 0px">
           <Paragraph
@@ -120,7 +120,7 @@ export function AccountDeleted() {
         <Column padding="0px 0px 0px 20px">
           <Heading headingType="h1" text="Account closed" fontSize="22px" fontWeight={700} color={INK} textAlign="left" lineHeight="1.25" fontFamily={serifFont} />
           <Paragraph
-            html="Your abc account and all associated data have been permanently deleted as requested."
+            html="Your Emailki account and all associated data have been permanently deleted as requested."
             fontSize="14px"
             color={MUTED_FG}
             textAlign="left"
@@ -308,12 +308,12 @@ export function AccountDeleted() {
       </Row>
       <Row layout={ColumnLayouts.OneColumn} padding="20px 40px 4px 40px">
         <Column>
-          <Paragraph html="abc Inc. · 123 Market St, San Francisco, CA 94105" fontSize="12px" color={SUBTLE} textAlign="center" lineHeight="150%" fontFamily={sansFont} />
+          <Paragraph html="Emailki Inc. · 123 Market St, San Francisco, CA 94105" fontSize="12px" color={SUBTLE} textAlign="center" lineHeight="150%" fontFamily={sansFont} />
         </Column>
       </Row>
       <Row layout={ColumnLayouts.OneColumn} padding="4px 40px 4px 40px">
         <Column>
-          <Paragraph html="© 2025 abc. All rights reserved." fontSize="12px" color={SUBTLE} textAlign="center" lineHeight="150%" fontFamily={sansFont} />
+          <Paragraph html="© 2025 Emailki. All rights reserved." fontSize="12px" color={SUBTLE} textAlign="center" lineHeight="150%" fontFamily={sansFont} />
         </Column>
       </Row>
       <Row layout={ColumnLayouts.ThreeEqual} padding="8px 40px 32px 40px">

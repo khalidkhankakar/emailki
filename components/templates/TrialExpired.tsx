@@ -107,7 +107,7 @@ export function TrialExpired() {
       contentWidth="600px"
       contentAlign="center"
       fontFamily={fontSans}
-      previewText="Your abc Pro trial has ended — your data is safe and you can reactivate anytime."
+      previewText="Your Emailki Pro trial has ended — your data is safe and you can reactivate anytime."
     >
 
       {/* ── 1. TOP ACCENT STRIP (4px amber bar) ─────────────────────────────── */}
@@ -126,7 +126,7 @@ export function TrialExpired() {
         <Column>
           <Paragraph
             html={serifBody(
-              `${boldSans("Your abc Pro trial has ended.")} <span style="color:#d6d3d1"> Your data is safe — no action required.</span>`,
+              `${boldSans("Your Emailki Pro trial has ended.")} <span style="color:#d6d3d1"> Your data is safe — no action required.</span>`,
               "#ffffff"
             )}
             fontSize="14px"
@@ -146,7 +146,7 @@ export function TrialExpired() {
         <Column padding="0px">
           <Heading
             headingType="h2"
-            text="abc"
+            text="Emailki"
             fontSize="26px"
             fontWeight={700}
             color={BRAND}
@@ -238,7 +238,7 @@ export function TrialExpired() {
           />
           <Paragraph
             html={serifBody(
-              `Your ${boldSans("abc Pro")} trial expired on Aug 6, 2025. Your account has moved to the free plan.`
+              `Your ${boldSans("Emailki Pro")} trial expired on Aug 6, 2025. Your account has moved to the free plan.`
             )}
             fontSize="14px"
             color={MUTED}
@@ -442,7 +442,7 @@ export function TrialExpired() {
             borderRadius="6px"
             textAlign="center"
           >
-            Reactivate abc Pro →
+            Reactivate Emailki Pro →
           </Button>
 
           <Paragraph
@@ -752,7 +752,7 @@ export function TrialExpired() {
            <Row layout={ColumnLayouts.OneColumn} padding="4px 40px 4px 40px">
              <Column>
                <Paragraph
-                 html="© 2025 abc. All rights reserved."
+                 html="© 2025 Emailki. All rights reserved."
                  fontSize="12px"
                  color={SUBTLE}
                  textAlign="center"

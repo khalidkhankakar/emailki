@@ -1,4 +1,4 @@
-@import "../tokens.css";
+@import "./tokens.css";
 @import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));

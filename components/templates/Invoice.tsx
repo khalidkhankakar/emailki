@@ -89,7 +89,7 @@ export function Invoice() {
 
   const lineItems: LineItem[] = [
     {
-      description: "abc Pro — Monthly Subscription",
+      description: "Emailki Pro — Monthly Subscription",
       detail: "Billing period: Aug 6 – Sep 5, 2025",
       amount: "$29.00",
     },
@@ -117,7 +117,7 @@ export function Invoice() {
       contentWidth="600px"
       contentAlign="center"
       fontFamily={fontSans}
-      previewText="Invoice #INV-2025-0081 from abc — $29.00 · Aug 6, 2025."
+      previewText="Invoice #INV-2025-0081 from Emailki — $29.00 · Aug 6, 2025."
     >
 
       {/* ── 1. TOP ACCENT STRIP (4px amber bar) ─────────────────────────────── */}
@@ -136,7 +136,7 @@ export function Invoice() {
         <Column padding="0px">
           <Heading
             headingType="h2"
-            text="abc"
+            text="Emailki"
             fontSize="28px"
             fontWeight={700}
             color={BRAND}
@@ -145,7 +145,7 @@ export function Invoice() {
             letterSpacing="0.06em"
           />
           <Paragraph
-            html={serifBody("abc Inc. · San Francisco, CA", SUBTLE)}
+            html={serifBody("Emailki Inc. · San Francisco, CA", SUBTLE)}
             fontSize="12px"
             color={SUBTLE}
             textAlign="left"
@@ -263,7 +263,7 @@ export function Invoice() {
             lineHeight="150%"
           />
           <Paragraph
-            html={serifBody("Faisalabad, Pakistan", MUTED)}
+            html={serifBody("KSF, Pakistan", MUTED)}
             fontSize="13px"
             color={MUTED}
             textAlign="left"
@@ -281,14 +281,14 @@ export function Invoice() {
             letterSpacing="0.10em"
           />
           <Paragraph
-            html={`<b style="font-family:'Oxanium',sans-serif;font-size:14px;color:${INK};">abc Inc.</b>`}
+            html={`<b style="font-family:'Oxanium',sans-serif;font-size:14px;color:${INK};">Emailki Inc.</b>`}
             fontSize="14px"
             color={INK}
             textAlign="right"
             lineHeight="160%"
           />
           <Paragraph
-            html={serifBody("billing@abc.app", MUTED)}
+            html={serifBody("billing@Emailki.app", MUTED)}
             fontSize="13px"
             color={MUTED}
             textAlign="right"
@@ -604,7 +604,7 @@ export function Invoice() {
       <Row layout={ColumnLayouts.OneColumn} padding="24px 48px 8px 48px">
         <Column>
           <Paragraph
-            html={serifBody("abc Inc. · 123 Market St, San Francisco, CA 94105 · billing@abc.app", SUBTLE)}
+            html={serifBody("Emailki Inc. · 123 Market St, San Francisco, CA 94105 · billing@Emailki.app", SUBTLE)}
             fontSize="12px"
             color={SUBTLE}
             textAlign="center"
@@ -615,7 +615,7 @@ export function Invoice() {
       <Row layout={ColumnLayouts.OneColumn} padding="4px 48px 4px 48px">
         <Column>
           <Paragraph
-            html={serifBody("© 2025 abc. All rights reserved. This invoice was generated automatically.", SUBTLE)}
+            html={serifBody("© 2025 Emailki. All rights reserved. This invoice was generated automatically.", SUBTLE)}
             fontSize="12px"
             color={SUBTLE}
             textAlign="center"

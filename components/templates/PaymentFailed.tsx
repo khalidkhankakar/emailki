@@ -77,7 +77,7 @@ const serifBody = (text: string, color: string = MUTED): string =>
   `<span style="font-family:'Merriweather',Georgia,serif;font-size:15px;line-height:1.75;color:${color};">${text}</span>`;
 
 const boldSans = (text: string): string =>
-  `<b style="font-family:'Oxanium',sans-serif;color:${INK};">${text}</b>`;
+  `<b style="font-family:'Oxanium',sans-serif;color:${BRAND_LT};">${text}</b>`;
 
 const valueSerif = (text: string): string =>
   `<b style="font-family:'Merriweather',Georgia,serif;font-size:13px;color:${INK};">${text}</b>`;
@@ -89,7 +89,7 @@ const valueSerif = (text: string): string =>
 export function PaymentFailed() {
   const detailRows: DetailRow[] = [
     { label: "Invoice",    value: "#INV-2025-0083" },
-    { label: "Plan",       value: "abc Pro — Monthly", loss: false },
+    { label: "Plan",       value: "Emailki Pro — Monthly", loss: false },
     { label: "Attempted",  value: "Aug 6, 2025 · 11:02 AM" },
     { label: "Card",       value: "Visa •••• 4242" },
     { label: "Reason",     value: "Insufficient funds", loss: true },
@@ -114,7 +114,7 @@ export function PaymentFailed() {
       contentWidth="600px"
       contentAlign="center"
       fontFamily={fontSans}
-      previewText="Action needed — your abc Pro payment didn't go through. Update your payment method to keep access."
+      previewText="Action needed — your Emailki Pro payment didn't go through. Update your payment method to keep access."
     >
 
       {/* ── 1. TOP ACCENT STRIP (4px amber bar) ─────────────────────────────── */}
@@ -133,7 +133,7 @@ export function PaymentFailed() {
         <Column>
           <Paragraph
             html={serifBody(
-              `${boldSans("⚠ Payment failed")} <span style="color:#fca5a5"> — action needed to keep your abc Pro access.</span>`,
+              `${boldSans("⚠ Payment failed")} <span style="color:#FFF"> — action needed to keep your Emailki Pro access.</span>`,
               "#ffffff"
             )}
             fontSize="14px"
@@ -153,7 +153,7 @@ export function PaymentFailed() {
         <Column padding="0px">
           <Heading
             headingType="h2"
-            text="abc"
+            text="Emailki"
             fontSize="26px"
             fontWeight={700}
             color={BRAND}
@@ -253,7 +253,7 @@ export function PaymentFailed() {
           />
           <Paragraph
             html={serifBody(
-              `We tried to charge ${boldSans("Visa •••• 4242")} for your abc Pro subscription but the payment was declined.`
+              `We tried to charge ${boldSans("Visa •••• 4242")} for your Emailki Pro subscription but the payment was declined.`
             )}
             fontSize="14px"
             color={MUTED}
@@ -709,7 +709,7 @@ export function PaymentFailed() {
       <Row layout={ColumnLayouts.OneColumn} padding="4px 48px 4px 48px">
         <Column>
           <Paragraph
-            html={serifBody("© 2025 abc. All rights reserved.", SUBTLE)}
+            html={serifBody("© 2025 Emailki. All rights reserved.", SUBTLE)}
             fontSize="12px"
             color={SUBTLE}
             textAlign="center"

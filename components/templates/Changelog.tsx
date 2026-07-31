@@ -1,292 +1,523 @@
 import {
-  Email,
-  Row,
+  Button,
   Column,
   ColumnLayouts,
+  Divider,
+  Email,
   Heading,
   Paragraph,
-  Button,
-  Divider,
-  Menu,
+  Row,
+  Social,
 } from "@unlayer/react-elements";
 
-// ─── Shared Design Tokens ────────────────────────────────────────────────────
-const BRAND    = "#6C63FF";
-const BRAND_DK = "#4F46E5";
-const INK      = "#1A1A2E";
-const MUTED    = "#6B7280";
-const SURFACE  = "#FFFFFF";
-const BG       = "#F4F4F8";
-const HAIRLINE = "#E8E8F0";
-const TICKET_BG = "#1A1A2E";   // dark ticket stub feel
-const TICKET_ACCENT = "#6C63FF";
+// ─── Design Tokens — warm artisan palette ─────────────────────────────────────
+const PRIMARY    = "#b45309"; // amber-700
+const PRIMARY_LT = "#fef3c7"; // amber-100
+const PRIMARY_DK = "#78350f"; // amber-900
+const PRIMARY_MD = "#d97706"; // amber-600
 
-const SANS = {
-  label: "Inter",
-  value: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif",
+const INK        = "#4a3b33";
+const MUTED_FG   = "#78716c";
+const SUBTLE     = "#a8a29e";
+const LINK       = "#b45309";
+
+const BG         = "#fdfbf7";
+const CARD       = "#f8f4ee";
+const MUTED      = "#f1e9da";
+const ACCENT     = "#f2daba";
+const WHITE      = "#ffffff";
+const BORDER     = "#e4d9bc";
+const SECONDARY  = "#e4c090";
+
+// Green — new features
+const GREEN      = "#15803d";
+const GREEN_LT   = "#f0fdf4";
+const GREEN_BD   = "#bbf7d0";
+
+// Red — breaking changes
+const RED        = "#991b1b";
+const RED_LT     = "#fef2f2";
+const RED_BD     = "#fecaca";
+
+// Blue — improvements (neutral from outside palette)
+const BLUE       = "#1d4ed8";
+const BLUE_LT    = "#eff6ff";
+const BLUE_BD    = "#bfdbfe";
+
+const serifFont = {
+  label: "Merriweather",
+  value: "'Merriweather', 'Georgia', serif",
 };
 
-const HR = {
-  borderBottomWidth: "1px",
-  borderBottomStyle: "solid",
-  borderBottomColor: HAIRLINE,
+const sansFont = {
+  label: "Oxanium",
+  value: "'Oxanium', 'Segoe UI', Arial, sans-serif",
 };
-
-function detailRow(label: string, value: string, last = false) {
-  const cell = { padding: "12px 0", border: last ? undefined : HR };
-  return (
-    <Row key={label} layout={ColumnLayouts.TwoEqual} backgroundColor={SURFACE} padding="0 48px">
-      <Column {...cell}>
-        <Paragraph html={label} fontSize="13px" color={MUTED} lineHeight="140%" />
-      </Column>
-      <Column {...cell}>
-        <Paragraph html={`<b>${value}</b>`} fontSize="13px" color={INK} textAlign="right" lineHeight="140%" />
-      </Column>
-    </Row>
-  );
-}
 
 export function Changelog() {
   return (
     <Email
       backgroundColor={BG}
-      contentWidth="620px"
+      contentWidth="600px"
       contentAlign="center"
-      fontFamily={SANS}
-      textColor={INK}
-      previewText="Your Summit 2026 ticket is ready — save it before the event."
+      fontFamily={serifFont}
+      previewText="Emailki v2.4.0 is here — AI workspaces, real-time collaboration, and 14 bug fixes."
     >
 
-      {/* ── Top spacer ── */}
-      <Row layout={ColumnLayouts.OneColumn} backgroundColor={BG} padding="32px 0 0 0">
-        <Column />
-      </Row>
-
-      {/* ── Brand header ── */}
-      <Row layout={ColumnLayouts.TwoWideNarrow} backgroundColor={SURFACE} padding="22px 48px 18px 48px">
+      {/* ── 1. DARK AMBER VERSION HERO BANNER ───────────────────────────────── */}
+      <Row layout={ColumnLayouts.OneColumn} backgroundColor={PRIMARY_DK} padding="44px 40px 16px 40px">
         <Column>
-          <Heading headingType="h2" fontSize="20px" fontWeight={700} color={BRAND} textAlign="left" fontFamily={SANS}>
-            Summit
-          </Heading>
-          <Paragraph html="by Unlayer Events" fontSize="11px" color={MUTED} lineHeight="100%" />
-        </Column>
-        <Column>
+          {/* Eyebrow */}
+          <Heading
+            headingType="h4"
+            text="✦  PRODUCT UPDATE"
+            fontSize="11px"
+            fontWeight={700}
+            color={PRIMARY_MD}
+            textAlign="center"
+            lineHeight="1.3"
+            letterSpacing="0.12em"
+            fontFamily={sansFont}
+          />
+          {/* Version number — the hero */}
+          <Heading
+            headingType="h1"
+            text="v2.4.0"
+            fontSize="56px"
+            fontWeight={900}
+            color={WHITE}
+            textAlign="center"
+            lineHeight="1.0"
+            letterSpacing="-0.02em"
+            fontFamily={sansFont}
+          />
+          <Heading
+            headingType="h2"
+            text="The collaboration update"
+            fontSize="20px"
+            fontWeight={700}
+            color="#fde68a"
+            textAlign="center"
+            lineHeight="1.2"
+            fontFamily={serifFont}
+          />
           <Paragraph
-            html={`<b style="background:#EEF2FF;color:#4338CA;padding:4px 12px;border-radius:20px;font-size:11px;letter-spacing:0.06em;">🎟 TICKET READY</b>`}
-            textAlign="right" fontSize="11px"
+            html="Released Aug 6, 2025 · 3 new features · 14 bug fixes · 1 breaking change"
+            fontSize="13px"
+            color="#fcd34d"
+            textAlign="center"
+            lineHeight="155%"
+            fontFamily={sansFont}
           />
         </Column>
       </Row>
 
-      {/* ── Accent bar ── */}
-      <Row layout={ColumnLayouts.OneColumn} backgroundColor={BRAND} padding="0px">
-        <Column padding="4px 0px" />
-      </Row>
-
-      {/* ── Hero ── */}
-      <Row layout={ColumnLayouts.OneColumn} backgroundColor={SURFACE} padding="40px 48px 8px 48px">
-        <Column>
-          <Heading headingType="h4" fontSize="11px" fontWeight={700} color={BRAND} letterSpacing="0.10em" fontFamily={SANS}>
-            YOUR TICKET IS READY
-          </Heading>
-          <Heading headingType="h1" fontSize="32px" fontWeight={700} color={INK} lineHeight="116%" fontFamily={SANS}>
-            Summit 2026 — General Admission
-          </Heading>
+      {/* Stats strip on banner */}
+      <Row layout={ColumnLayouts.ThreeEqual} backgroundColor={PRIMARY_DK} padding="16px 40px 36px 40px">
+        <Column backgroundColor="#92400e" borderRadius="6px" padding="12px 8px">
+          <Heading headingType="h2" text="3" fontSize="28px" fontWeight={900} color={WHITE} textAlign="center" lineHeight="1.0" fontFamily={sansFont} />
+          <Paragraph html="New features" fontSize="11px" color="#fde68a" textAlign="center" lineHeight="140%" fontFamily={sansFont} />
+        </Column>
+        <Column backgroundColor="#92400e" borderRadius="6px" padding="12px 8px">
+          <Heading headingType="h2" text="14" fontSize="28px" fontWeight={900} color={WHITE} textAlign="center" lineHeight="1.0" fontFamily={sansFont} />
+          <Paragraph html="Bug fixes" fontSize="11px" color="#fde68a" textAlign="center" lineHeight="140%" fontFamily={sansFont} />
+        </Column>
+        <Column backgroundColor="#92400e" borderRadius="6px" padding="12px 8px">
+          <Heading headingType="h2" text="1" fontSize="28px" fontWeight={900} color={WHITE} textAlign="center" lineHeight="1.0" fontFamily={sansFont} />
+          <Paragraph html="Breaking change" fontSize="11px" color="#fde68a" textAlign="center" lineHeight="140%" fontFamily={sansFont} />
         </Column>
       </Row>
 
-      <Row layout={ColumnLayouts.OneColumn} backgroundColor={SURFACE} padding="4px 48px 32px 48px">
-        <Column>
-          <Paragraph
-            html="Save or print your ticket below. You'll need it at check-in on April 24."
-            fontSize="15px" color={MUTED} lineHeight="160%"
-          />
-        </Column>
-      </Row>
-
-      {/* ── TICKET STUB (dark card) ── */}
-      <Row layout={ColumnLayouts.OneColumn} backgroundColor={TICKET_BG} padding="0px">
+      {/* ── 2. HEADER ───────────────────────────────────────────────────────── */}
+      <Row layout={ColumnLayouts.TwoEqual} backgroundColor={WHITE} padding="24px 40px 20px 40px">
         <Column padding="0px">
-
-          {/* Ticket top: event name band */}
-          <Row layout={ColumnLayouts.OneColumn} backgroundColor={TICKET_ACCENT} padding="14px 48px">
-            <Column>
-              <Heading headingType="h3" fontSize="13px" fontWeight={700} color="#FFFFFF" letterSpacing="0.08em" textAlign="center" fontFamily={SANS}>
-                SUMMIT 2026 · MOSCONE CENTER WEST · SAN FRANCISCO
-              </Heading>
-            </Column>
-          </Row>
-
-          {/* Ticket body: 2-col — attendee info + barcode area */}
-          <Row layout={ColumnLayouts.TwoWideNarrow} backgroundColor={TICKET_BG} padding="28px 48px 12px 48px">
-            <Column>
-              <Paragraph html={`<span style="color:#A5B4FC;font-size:10px;letter-spacing:0.08em;font-weight:700;">ATTENDEE</span>`} fontSize="10px" />
-              <Heading headingType="h2" fontSize="22px" fontWeight={700} color="#FFFFFF" fontFamily={SANS}>
-                Jordan Rivera
-              </Heading>
-              <Paragraph html={`<span style="color:#A5B4FC;font-size:11px;">jordan@example.com</span>`} fontSize="11px" />
-            </Column>
-            <Column>
-              <Paragraph html={`<span style="color:#A5B4FC;font-size:10px;letter-spacing:0.08em;font-weight:700;">TICKET TYPE</span>`} fontSize="10px" />
-              <Heading headingType="h3" fontSize="16px" fontWeight={700} color="#FFFFFF" fontFamily={SANS}>
-                General Admission
-              </Heading>
-              <Paragraph html={`<span style="color:#A5B4FC;font-size:11px;">Full 3-day access</span>`} fontSize="11px" />
-            </Column>
-          </Row>
-
-          {/* Ticket mid: 3-col event facts */}
-          <Row layout={ColumnLayouts.ThreeEqual} backgroundColor={TICKET_BG} padding="4px 48px 20px 48px">
-            <Column>
-              <Paragraph html={`<span style="color:#A5B4FC;font-size:10px;letter-spacing:0.08em;font-weight:700;">DATES</span>`} fontSize="10px" />
-              <Paragraph html={`<span style="color:#FFFFFF;font-size:13px;font-weight:600;">Apr 24–26</span>`} fontSize="13px" />
-            </Column>
-            <Column>
-              <Paragraph html={`<span style="color:#A5B4FC;font-size:10px;letter-spacing:0.08em;font-weight:700;">CHECK-IN</span>`} fontSize="10px" />
-              <Paragraph html={`<span style="color:#FFFFFF;font-size:13px;font-weight:600;">8:00 AM</span>`} fontSize="13px" />
-            </Column>
-            <Column>
-              <Paragraph html={`<span style="color:#A5B4FC;font-size:10px;letter-spacing:0.08em;font-weight:700;">DOOR</span>`} fontSize="10px" />
-              <Paragraph html={`<span style="color:#FFFFFF;font-size:13px;font-weight:600;">Hall B · Gate 3</span>`} fontSize="13px" />
-            </Column>
-          </Row>
-
-          {/* Dashed tear line */}
-          <Row layout={ColumnLayouts.OneColumn} backgroundColor={TICKET_BG} padding="0 48px">
-            <Column>
-              <Divider
-                borderTopWidth="1px"
-                borderTopColor="#3B3B5C"
-                borderTopStyle="dashed"
-              />
-            </Column>
-          </Row>
-
-          {/* Barcode area */}
-          <Row layout={ColumnLayouts.OneColumn} backgroundColor={TICKET_BG} padding="24px 48px 12px 48px">
-            <Column>
-              {/* Barcode visual via monospace characters */}
-              <Paragraph
-                html={`<span style="font-family:monospace;font-size:32px;letter-spacing:2px;color:#FFFFFF;display:block;text-align:center;line-height:1;">
-                  ▐█▌▐▌█▐▌▌▐█▌
-                </span>`}
-                textAlign="center" fontSize="32px"
-              />
-              <Heading headingType="h3" fontSize="14px" fontWeight={700} color="#FFFFFF" textAlign="center" letterSpacing="0.14em" fontFamily={SANS}>
-                SMT-2026-08842
-              </Heading>
-              <Paragraph
-                html={`<span style="color:#6B7280;font-size:11px;">Scan at check-in · One-time use only</span>`}
-                textAlign="center" fontSize="11px"
-              />
-            </Column>
-          </Row>
-
-          {/* Bottom padding on dark stub */}
-          <Row layout={ColumnLayouts.OneColumn} backgroundColor={TICKET_BG} padding="16px 0 0 0">
-            <Column />
-          </Row>
-
+          <Heading headingType="h2" text="Emailki" fontSize="22px" fontWeight={900} color={INK} textAlign="left" lineHeight="1.2" letterSpacing="0.02em" fontFamily={sansFont} />
+        </Column>
+        <Column padding="4px 0px 0px 0px">
+          <Paragraph
+            html={`<span style="background:${PRIMARY_LT}; color:${PRIMARY}; padding:3px 10px; border-radius:4px; font-size:11px; font-weight:700; letter-spacing:0.06em;">v2.4.0 · Aug 6, 2025</span>`}
+            fontSize="11px"
+            color={PRIMARY}
+            textAlign="right"
+            lineHeight="150%"
+            fontFamily={sansFont}
+          />
         </Column>
       </Row>
 
-      {/* ── Download CTA ── */}
-      <Row layout={ColumnLayouts.OneColumn} backgroundColor={SURFACE} padding="28px 48px 12px 48px">
+      {/* ── 3. DIVIDER ─────────────────────────────────────────────────────── */}
+      <Row layout={ColumnLayouts.OneColumn} backgroundColor={WHITE} padding="0px 40px">
+        <Column><Divider borderTopWidth="1px" borderTopColor={BORDER} borderTopStyle="solid" /></Column>
+      </Row>
+
+      {/* ── 4. WHAT'S NEW — section label ───────────────────────────────────── */}
+      <Row layout={ColumnLayouts.OneColumn} backgroundColor={WHITE} padding="28px 40px 8px 40px">
+        <Column>
+          <Heading
+            headingType="h4"
+            text="✦  WHAT'S NEW"
+            fontSize="10px"
+            fontWeight={700}
+            color={SUBTLE}
+            textAlign="left"
+            lineHeight="1.3"
+            letterSpacing="0.10em"
+            fontFamily={sansFont}
+          />
+        </Column>
+      </Row>
+
+      {/* ── 5. FEATURE 1 — wide left, narrow right (text + badge) ───────────── */}
+      <Row layout={ColumnLayouts.TwoWideNarrow} backgroundColor={WHITE} padding="8px 40px 16px 40px">
+        <Column>
+          <Paragraph
+            html={`<span style="background:${GREEN_LT}; color:${GREEN}; padding:2px 8px; border-radius:4px; font-size:10px; font-weight:700; letter-spacing:0.06em;">NEW</span>`}
+            fontSize="10px"
+            color={GREEN}
+            textAlign="left"
+            lineHeight="150%"
+            fontFamily={sansFont}
+          />
+          <Heading
+            headingType="h3"
+            text="AI Workspaces"
+            fontSize="17px"
+            fontWeight={700}
+            color={INK}
+            textAlign="left"
+            lineHeight="1.3"
+            fontFamily={serifFont}
+          />
+          <Paragraph
+            html="Each project now gets its own dedicated AI workspace — a context-aware assistant that remembers your project goals, stack, and preferences. No more re-explaining yourself."
+            fontSize="13px"
+            color={MUTED_FG}
+            textAlign="left"
+            lineHeight="165%"
+            fontFamily={serifFont}
+          />
+          <Paragraph
+            html={`<a href="#" style="color:${LINK}; font-weight:700; text-decoration:none; font-size:13px;">Read the docs →</a>`}
+            fontSize="13px"
+            color={PRIMARY}
+            textAlign="left"
+            lineHeight="150%"
+            fontFamily={sansFont}
+          />
+        </Column>
+        <Column
+          backgroundColor={GREEN_LT}
+          borderRadius="6px"
+          padding="20px 12px"
+          border={{ borderBottomWidth: "2px", borderBottomStyle: "solid", borderBottomColor: GREEN_BD }}
+        >
+          <Heading headingType="h2" text="✦" fontSize="28px" fontWeight={400} color={GREEN} textAlign="center" lineHeight="1.1" fontFamily={sansFont} />
+          <Paragraph html="AI<br/>Workspace" fontSize="12px" color={GREEN} textAlign="center" lineHeight="140%" fontFamily={sansFont} />
+          <Paragraph html="Pro only" fontSize="10px" color={SUBTLE} textAlign="center" lineHeight="140%" fontFamily={sansFont} />
+        </Column>
+      </Row>
+
+      {/* Hairline between features */}
+      <Row layout={ColumnLayouts.OneColumn} backgroundColor={WHITE} padding="0px 40px">
+        <Column><Divider borderTopWidth="1px" borderTopColor={BORDER} borderTopStyle="dashed" /></Column>
+      </Row>
+
+      {/* ── 6. FEATURE 2 — narrow left (badge), wide right (text) ───────────── */}
+      {/* Layout flipped from Feature 1 — visual rhythm */}
+      <Row layout={ColumnLayouts.TwoNarrowWide} backgroundColor={WHITE} padding="16px 40px 16px 40px">
+        <Column
+          backgroundColor={BLUE_LT}
+          borderRadius="6px"
+          padding="20px 12px"
+          border={{ borderBottomWidth: "2px", borderBottomStyle: "solid", borderBottomColor: BLUE_BD }}
+        >
+          <Heading headingType="h2" text="⟳" fontSize="28px" fontWeight={400} color={BLUE} textAlign="center" lineHeight="1.1" fontFamily={sansFont} />
+          <Paragraph html="Real-time<br/>Sync" fontSize="12px" color={BLUE} textAlign="center" lineHeight="140%" fontFamily={sansFont} />
+          <Paragraph html="All plans" fontSize="10px" color={SUBTLE} textAlign="center" lineHeight="140%" fontFamily={sansFont} />
+        </Column>
+        <Column padding="0px 0px 0px 20px">
+          <Paragraph
+            html={`<span style="background:${BLUE_LT}; color:${BLUE}; padding:2px 8px; border-radius:4px; font-size:10px; font-weight:700; letter-spacing:0.06em;">IMPROVED</span>`}
+            fontSize="10px"
+            color={BLUE}
+            textAlign="left"
+            lineHeight="150%"
+            fontFamily={sansFont}
+          />
+          <Heading
+            headingType="h3"
+            text="Real-time collaboration"
+            fontSize="17px"
+            fontWeight={700}
+            color={INK}
+            textAlign="left"
+            lineHeight="1.3"
+            fontFamily={serifFont}
+          />
+          <Paragraph
+            html="Multiple team members can now edit the same document simultaneously with live cursors, presence indicators, and instant conflict resolution — no refresh needed."
+            fontSize="13px"
+            color={MUTED_FG}
+            textAlign="left"
+            lineHeight="165%"
+            fontFamily={serifFont}
+          />
+          <Paragraph
+            html={`<a href="#" style="color:${LINK}; font-weight:700; text-decoration:none; font-size:13px;">See it in action →</a>`}
+            fontSize="13px"
+            color={PRIMARY}
+            textAlign="left"
+            lineHeight="150%"
+            fontFamily={sansFont}
+          />
+        </Column>
+      </Row>
+
+      {/* Hairline */}
+      <Row layout={ColumnLayouts.OneColumn} backgroundColor={WHITE} padding="0px 40px">
+        <Column><Divider borderTopWidth="1px" borderTopColor={BORDER} borderTopStyle="dashed" /></Column>
+      </Row>
+
+      {/* ── 7. FEATURE 3 — back to wide left ────────────────────────────────── */}
+      <Row layout={ColumnLayouts.TwoWideNarrow} backgroundColor={WHITE} padding="16px 40px 28px 40px">
+        <Column>
+          <Paragraph
+            html={`<span style="background:${PRIMARY_LT}; color:${PRIMARY}; padding:2px 8px; border-radius:4px; font-size:10px; font-weight:700; letter-spacing:0.06em;">NEW</span>`}
+            fontSize="10px"
+            color={PRIMARY}
+            textAlign="left"
+            lineHeight="150%"
+            fontFamily={sansFont}
+          />
+          <Heading
+            headingType="h3"
+            text="Smart export templates"
+            fontSize="17px"
+            fontWeight={700}
+            color={INK}
+            textAlign="left"
+            lineHeight="1.3"
+            fontFamily={serifFont}
+          />
+          <Paragraph
+            html="Export to PDF, CSV, Notion, or Markdown with one click — using saved templates that remember your formatting preferences per project."
+            fontSize="13px"
+            color={MUTED_FG}
+            textAlign="left"
+            lineHeight="165%"
+            fontFamily={serifFont}
+          />
+          <Paragraph
+            html={`<a href="#" style="color:${LINK}; font-weight:700; text-decoration:none; font-size:13px;">Set up templates →</a>`}
+            fontSize="13px"
+            color={PRIMARY}
+            textAlign="left"
+            lineHeight="150%"
+            fontFamily={sansFont}
+          />
+        </Column>
+        <Column
+          backgroundColor={PRIMARY_LT}
+          borderRadius="6px"
+          padding="20px 12px"
+          border={{ borderBottomWidth: "2px", borderBottomStyle: "solid", borderBottomColor: SECONDARY }}
+        >
+          <Heading headingType="h2" text="↗" fontSize="28px" fontWeight={400} color={PRIMARY} textAlign="center" lineHeight="1.1" fontFamily={sansFont} />
+          <Paragraph html="Smart<br/>Export" fontSize="12px" color={PRIMARY} textAlign="center" lineHeight="140%" fontFamily={sansFont} />
+          <Paragraph html="All plans" fontSize="10px" color={SUBTLE} textAlign="center" lineHeight="140%" fontFamily={sansFont} />
+        </Column>
+      </Row>
+
+      {/* ── 8. DIVIDER ─────────────────────────────────────────────────────── */}
+      <Row layout={ColumnLayouts.OneColumn} backgroundColor={WHITE} padding="0px 40px">
+        <Column><Divider borderTopWidth="1px" borderTopColor={BORDER} borderTopStyle="solid" /></Column>
+      </Row>
+
+      {/* ── 9. BUG FIXES — 2×3 compact grid ────────────────────────────────── */}
+      <Row layout={ColumnLayouts.OneColumn} backgroundColor={WHITE} padding="24px 40px 8px 40px">
+        <Column>
+          <Heading headingType="h4" text="🐛  BUG FIXES · 14 resolved" fontSize="10px" fontWeight={700} color={SUBTLE} textAlign="left" lineHeight="1.3" letterSpacing="0.10em" fontFamily={sansFont} />
+        </Column>
+      </Row>
+
+      <Row layout={ColumnLayouts.TwoEqual} backgroundColor={WHITE} padding="8px 32px 6px 32px">
+        <Column backgroundColor={MUTED} borderRadius="6px" padding="12px 14px">
+          <Paragraph html={`<b style="color:${INK}">Fixed: export timeout</b>`} fontSize="12px" color={INK} textAlign="left" lineHeight="140%" fontFamily={sansFont} />
+          <Paragraph html="Large exports no longer time out after 30s." fontSize="11px" color={MUTED_FG} textAlign="left" lineHeight="145%" fontFamily={serifFont} />
+        </Column>
+        <Column backgroundColor={MUTED} borderRadius="6px" padding="12px 14px">
+          <Paragraph html={`<b style="color:${INK}">Fixed: Safari scroll bug</b>`} fontSize="12px" color={INK} textAlign="left" lineHeight="140%" fontFamily={sansFont} />
+          <Paragraph html="Sidebar scrolling now works on Safari 17+." fontSize="11px" color={MUTED_FG} textAlign="left" lineHeight="145%" fontFamily={serifFont} />
+        </Column>
+      </Row>
+
+      <Row layout={ColumnLayouts.TwoEqual} backgroundColor={WHITE} padding="6px 32px 6px 32px">
+        <Column backgroundColor={MUTED} borderRadius="6px" padding="12px 14px">
+          <Paragraph html={`<b style="color:${INK}">Fixed: mention notifications</b>`} fontSize="12px" color={INK} textAlign="left" lineHeight="140%" fontFamily={sansFont} />
+          <Paragraph html="@mentions now send emails reliably." fontSize="11px" color={MUTED_FG} textAlign="left" lineHeight="145%" fontFamily={serifFont} />
+        </Column>
+        <Column backgroundColor={MUTED} borderRadius="6px" padding="12px 14px">
+          <Paragraph html={`<b style="color:${INK}">Fixed: dark mode colors</b>`} fontSize="12px" color={INK} textAlign="left" lineHeight="140%" fontFamily={sansFont} />
+          <Paragraph html="Code blocks now render correctly in dark mode." fontSize="11px" color={MUTED_FG} textAlign="left" lineHeight="145%" fontFamily={serifFont} />
+        </Column>
+      </Row>
+
+      <Row layout={ColumnLayouts.TwoEqual} backgroundColor={WHITE} padding="6px 32px 28px 32px">
+        <Column backgroundColor={MUTED} borderRadius="6px" padding="12px 14px">
+          <Paragraph html={`<b style="color:${INK}">Fixed: CSV import</b>`} fontSize="12px" color={INK} textAlign="left" lineHeight="140%" fontFamily={sansFont} />
+          <Paragraph html="UTF-8 encoded files import without corruption." fontSize="11px" color={MUTED_FG} textAlign="left" lineHeight="145%" fontFamily={serifFont} />
+        </Column>
+        <Column backgroundColor={MUTED} borderRadius="6px" padding="12px 14px">
+          <Paragraph html={`<a href="#" style="color:${LINK}; font-weight:700; text-decoration:none;">View all 14 fixes →</a>`} fontSize="12px" color={LINK} textAlign="left" lineHeight="140%" fontFamily={sansFont} />
+          <Paragraph html="Full list on our changelog page." fontSize="11px" color={MUTED_FG} textAlign="left" lineHeight="145%" fontFamily={serifFont} />
+        </Column>
+      </Row>
+
+      {/* ── 10. DIVIDER ─────────────────────────────────────────────────────── */}
+      <Row layout={ColumnLayouts.OneColumn} backgroundColor={WHITE} padding="0px 40px">
+        <Column><Divider borderTopWidth="1px" borderTopColor={BORDER} borderTopStyle="solid" /></Column>
+      </Row>
+
+      {/* ── 11. BREAKING CHANGE — red notice ────────────────────────────────── */}
+      <Row layout={ColumnLayouts.OneColumn} backgroundColor={WHITE} padding="24px 40px 8px 40px">
+        <Column>
+          <Heading headingType="h4" text="⚠  BREAKING CHANGE" fontSize="10px" fontWeight={700} color={RED} textAlign="left" lineHeight="1.3" letterSpacing="0.10em" fontFamily={sansFont} />
+        </Column>
+      </Row>
+
+      <Row layout={ColumnLayouts.OneColumn} backgroundColor={WHITE} padding="0px 40px 28px 40px">
+        <Column
+          backgroundColor={RED_LT}
+          borderRadius="6px"
+          padding="18px 20px"
+          border={{ borderBottomWidth: "2px", borderBottomStyle: "solid", borderBottomColor: RED_BD }}
+        >
+          <Paragraph
+            html={`<b style="color:${RED}">API v1 endpoints deprecated</b>`}
+            fontSize="14px"
+            color={RED}
+            textAlign="left"
+            lineHeight="150%"
+            fontFamily={sansFont}
+          />
+          <Paragraph
+            html="The <b>v1 REST API</b> will be sunset on <b>Oct 1, 2025</b>. Please migrate to the v2 API before this date. All v1 endpoints will return <code>410 Gone</code> after sunset."
+            fontSize="13px"
+            color={MUTED_FG}
+            textAlign="left"
+            lineHeight="165%"
+            fontFamily={serifFont}
+          />
+          <Paragraph
+            html={`<a href="#" style="color:${RED}; font-weight:700; text-decoration:none;">View migration guide →</a>`}
+            fontSize="13px"
+            color={RED}
+            textAlign="left"
+            lineHeight="150%"
+            fontFamily={sansFont}
+          />
+        </Column>
+      </Row>
+
+      {/* ── 12. DIVIDER ─────────────────────────────────────────────────────── */}
+      <Row layout={ColumnLayouts.OneColumn} backgroundColor={WHITE} padding="0px 40px">
+        <Column><Divider borderTopWidth="1px" borderTopColor={BORDER} borderTopStyle="solid" /></Column>
+      </Row>
+
+      {/* ── 13. CTA — try the update ────────────────────────────────────────── */}
+      <Row layout={ColumnLayouts.OneColumn} backgroundColor={WHITE} padding="28px 40px 8px 40px">
+        <Column>
+          <Heading
+            headingType="h2"
+            text="Ready to explore v2.4.0?"
+            fontSize="20px"
+            fontWeight={700}
+            color={INK}
+            textAlign="center"
+            lineHeight="1.2"
+            fontFamily={serifFont}
+          />
+          <Paragraph
+            html="Everything is live — open your workspace and try the new features now."
+            fontSize="14px"
+            color={MUTED_FG}
+            textAlign="center"
+            lineHeight="160%"
+            fontFamily={serifFont}
+          />
+        </Column>
+      </Row>
+
+      <Row layout={ColumnLayouts.OneColumn} backgroundColor={WHITE} padding="12px 40px 8px 40px">
         <Column>
           <Button
             width="100%"
-            href="https://summit2026.example.com/ticket/SMT-2026-08842/download"
-            backgroundColor={BRAND}
-            hoverBackgroundColor={BRAND_DK}
-            color="#FFFFFF"
-            fontSize="15px"
+            href="#"
+            backgroundColor={PRIMARY}
+            color={WHITE}
+            hoverBackgroundColor={PRIMARY_DK}
+            fontSize="16px"
             fontWeight={700}
             padding="16px 28px"
-            borderRadius="10px"
+            borderRadius="4px"
             textAlign="center"
-            fontFamily={SANS}
+            fontFamily={sansFont}
           >
-            Download Ticket (PDF)
+            Open My Workspace →
           </Button>
         </Column>
       </Row>
 
-      <Row layout={ColumnLayouts.OneColumn} backgroundColor={SURFACE} padding="0 48px 28px 48px">
+      {/* Secondary links */}
+      <Row layout={ColumnLayouts.TwoEqual} backgroundColor={WHITE} padding="8px 40px 28px 40px">
         <Column>
-          <Button
-            width="100%"
-            href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Summit+2026"
-            backgroundColor={SURFACE}
-            color={BRAND}
-            fontSize="14px"
-            fontWeight={700}
-            padding="14px 28px"
-            borderRadius="10px"
-            textAlign="center"
-            fontFamily={SANS}
-          >
-            + Add to Calendar
-          </Button>
+          <Paragraph html={`<a href="#" style="color:${LINK}; font-weight:600; text-decoration:none; font-size:13px;">Full changelog →</a>`} fontSize="13px" color={LINK} textAlign="left" lineHeight="150%" fontFamily={sansFont} />
+        </Column>
+        <Column>
+          <Paragraph html={`<a href="#" style="color:${LINK}; font-weight:600; text-decoration:none; font-size:13px;">GitHub release →</a>`} fontSize="13px" color={LINK} textAlign="right" lineHeight="150%" fontFamily={sansFont} />
         </Column>
       </Row>
 
-      {/* ── Hairline ── */}
-      <Row layout={ColumnLayouts.OneColumn} backgroundColor={SURFACE} padding="0 48px">
-        <Column>
-          <Divider borderTopWidth="1px" borderTopColor={HAIRLINE} borderTopStyle="solid" />
-        </Column>
+      {/* ── 14. FOOTER ─────────────────────────────────────────────────────── */}
+      <Row layout={ColumnLayouts.OneColumn} padding="0px 40px">
+        <Column><Divider borderTopWidth="1px" borderTopColor={BORDER} borderTopStyle="solid" /></Column>
       </Row>
-
-      {/* ── Order summary label ── */}
-      <Row layout={ColumnLayouts.OneColumn} backgroundColor={SURFACE} padding="24px 48px 4px 48px">
+      <Row layout={ColumnLayouts.OneColumn} padding="24px 40px 8px 40px">
         <Column>
-          <Heading headingType="h4" fontSize="11px" fontWeight={700} color={MUTED} letterSpacing="0.08em" fontFamily={SANS}>
-            ORDER SUMMARY
-          </Heading>
-        </Column>
-      </Row>
-
-      {detailRow("Order #", "SMT-2026-08842")}
-      {detailRow("Ticket", "General Admission × 1")}
-      {detailRow("Subtotal", "$299.00")}
-      {detailRow("Discount", '<span style="color:#059669">–$0.00</span>')}
-      {detailRow("Tax", "$26.91")}
-      {detailRow("Total Charged", "<b style='font-size:15px'>$325.91</b>", true)}
-
-      {/* ── Help note ── */}
-      <Row layout={ColumnLayouts.OneColumn} backgroundColor="#F0EEFF" padding="22px 48px">
-        <Column>
-          <Paragraph
-            html={`Need to transfer or cancel your ticket? Visit your <a href="https://summit2026.example.com/my-registration" style="color:${BRAND};font-weight:600;">registration page</a> or reply to this email — changes are free up to 14 days before the event.`}
-            fontSize="13px" color={MUTED} textAlign="center" lineHeight="162%"
-          />
-        </Column>
-      </Row>
-
-      {/* ── Footer ── */}
-      <Row layout={ColumnLayouts.OneColumn} backgroundColor={BG} padding="8px 0 0 0">
-        <Column />
-      </Row>
-      <Row layout={ColumnLayouts.OneColumn} backgroundColor={BG} padding="20px 48px 8px 48px">
-        <Column>
-          <Menu
-            items={[
-              { text: "My Ticket", href: "https://summit2026.example.com/my-registration" },
-              { text: "Agenda", href: "https://summit2026.example.com/agenda" },
-              { text: "Venue Map", href: "https://summit2026.example.com/venue" },
-              { text: "Unsubscribe", href: "https://summit2026.example.com/unsubscribe" },
+          <Social
+            icons={[
+              { name: "Twitter", url: "https://twitter.com" },
+              { name: "LinkedIn", url: "https://linkedin.com" },
+              { name: "Github", url: "https://github.com" },
             ]}
-            layout="horizontal" separator="·" align="center"
+            iconType="rounded"
+            iconSize={28}
+            spacing={10}
+            align="center"
           />
         </Column>
       </Row>
-      <Row layout={ColumnLayouts.OneColumn} backgroundColor={BG} padding="0 48px 32px 48px">
+      <Row layout={ColumnLayouts.OneColumn} padding="4px 40px 4px 40px">
+        <Column>
+          <Paragraph html="© 2025 Emailki. All rights reserved." fontSize="12px" color={SUBTLE} textAlign="center" lineHeight="150%" fontFamily={sansFont} />
+        </Column>
+      </Row>
+      <Row layout={ColumnLayouts.OneColumn} padding="4px 40px 4px 40px">
         <Column>
           <Paragraph
-            html="Summit Events Inc. · 535 Mission St, San Francisco, CA 94105<br/>This is your official ticket confirmation. Please keep for your records."
-            fontSize="11px" color={MUTED} textAlign="center" lineHeight="160%"
+            html={`You're receiving this because you opted in to product updates. <a href="#" style="color:${LINK}; text-decoration:none;">Unsubscribe from changelogs</a>`}
+            fontSize="12px"
+            color={SUBTLE}
+            textAlign="center"
+            lineHeight="150%"
+            fontFamily={sansFont}
           />
         </Column>
+      </Row>
+      <Row layout={ColumnLayouts.ThreeEqual} padding="8px 40px 32px 40px">
+        <Column><Paragraph html={`<a href="#" style="color:${LINK}; text-decoration:none;">Privacy Policy</a>`} fontSize="12px" color={SUBTLE} textAlign="center" lineHeight="150%" fontFamily={sansFont} /></Column>
+        <Column><Paragraph html={`<a href="#" style="color:${LINK}; text-decoration:none;">Changelog</a>`} fontSize="12px" color={SUBTLE} textAlign="center" lineHeight="150%" fontFamily={sansFont} /></Column>
+        <Column><Paragraph html={`<a href="#" style="color:${LINK}; text-decoration:none;">GitHub</a>`} fontSize="12px" color={SUBTLE} textAlign="center" lineHeight="150%" fontFamily={sansFont} /></Column>
       </Row>
 
     </Email>

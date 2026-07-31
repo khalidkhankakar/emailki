@@ -82,7 +82,7 @@ const highlightSerif = (text: string): string =>
 
 export function TrialReminder() {
   const detailRows: DetailRow[] = [
-    { label: "Plan",         value: "abc Pro",  highlight: true },
+    { label: "Plan",         value: "Emailki Pro",  highlight: true },
     { label: "Monthly",      value: "$29 / mo" },
     { label: "Annual",       value: "$19 / mo" },
     { label: "First charge", value: "Aug 6, 2025" },
@@ -101,7 +101,7 @@ export function TrialReminder() {
       contentWidth="600px"
       contentAlign="center"
       fontFamily={fontSans}
-      previewText="Your abc Pro trial ends in 3 days — don't lose access to everything you've built."
+      previewText="Your Emailki Pro trial ends in 3 days — don't lose access to everything you've built."
     >
 
       {/* ── 1. TOP ACCENT STRIP (4px amber bar) ─────────────────────────────── */}
@@ -120,7 +120,7 @@ export function TrialReminder() {
         <Column>
           <Paragraph
             html={serifBody(
-              `${boldSans("⏱ Your abc Pro trial ends in 3 days")} <span style="color:#fde68a"> — Aug 6, 2025</span>`,
+              `${boldSans("⏱ Your Emailki Pro trial ends in 3 days")} <span style="color:#fde68a"> — Aug 6, 2025</span>`,
               "#ffffff"
             )}
             fontSize="14px"
@@ -140,7 +140,7 @@ export function TrialReminder() {
         <Column padding="0px">
           <Heading
             headingType="h2"
-            text="abc"
+            text="Emailki"
             fontSize="26px"
             fontWeight={700}
             color={BRAND}
@@ -202,7 +202,7 @@ export function TrialReminder() {
           />
           <Paragraph
             html={serifBody(
-              `Your ${boldSans("abc Pro")} trial expires on ${boldSans("Aug 6, 2025")}. Upgrade now to keep full access to everything you've built.`
+              `Your ${boldSans("Emailki Pro")} trial expires on ${boldSans("Aug 6, 2025")}. Upgrade now to keep full access to everything you've built.`
             )}
             fontSize="15px"
             color={MUTED}
@@ -281,7 +281,7 @@ export function TrialReminder() {
             borderRadius="6px"
             textAlign="center"
           >
-            Upgrade to abc Pro
+            Upgrade to Emailki Pro
           </Button>
         </Column>
       </Row>
@@ -596,7 +596,7 @@ export function TrialReminder() {
       <Row layout={ColumnLayouts.OneColumn} padding="4px 48px 4px 48px">
         <Column>
           <Paragraph
-            html={serifBody("© 2025 abc. All rights reserved.", SUBTLE)}
+            html={serifBody("© 2025 Emailki. All rights reserved.", SUBTLE)}
             fontSize="12px"
             color={SUBTLE}
             textAlign="center"

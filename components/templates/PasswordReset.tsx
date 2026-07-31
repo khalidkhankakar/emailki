@@ -80,7 +80,7 @@ export function PasswordReset() {
     { label: "Requested at",  value: "Jul 23, 2025 · 09:12 AM" },
     { label: "Link expires",  value: "Jul 23, 2025 · 09:42 AM" },
     { label: "Device",        value: "Chrome on macOS" },
-    { label: "Location",      value: "Faisalabad, PK" },
+    { label: "Location",      value: "KSF, PK" },
   ];
 
   const safetyTips: SafetyTip[] = [
@@ -92,7 +92,7 @@ export function PasswordReset() {
     {
       icon: "🔒",
       title: "Enable two-factor auth",
-      description: "Add an extra layer of security to your abc account in Settings.",
+      description: "Add an extra layer of security to your Emailki account in Settings.",
     },
   ];
 
@@ -102,7 +102,7 @@ export function PasswordReset() {
       contentWidth="600px"
       contentAlign="center"
       fontFamily={fontSans}
-      previewText="Reset your abc password — this link expires in 30 minutes."
+      previewText="Reset your Emailki password — this link expires in 30 minutes."
     >
 
       {/* ── 1. TOP ACCENT STRIP (4px amber bar) ─────────────────────────────── */}
@@ -121,7 +121,7 @@ export function PasswordReset() {
         <Column>
           <Heading
             headingType="h2"
-            text="abc"
+            text="Emailki"
             fontSize="28px"
             fontWeight={700}
             color={BRAND}
@@ -208,7 +208,7 @@ export function PasswordReset() {
           {/* Body copy — serif for readability */}
           <Paragraph
             html={serifBody(
-              `Hi there! We received a request to reset the password for your ${boldSans("abc")} account. Click the button below to choose a new password.`
+              `Hi there! We received a request to reset the password for your ${boldSans("Emailki")} account. Click the button below to choose a new password.`
             )}
             fontSize="15px"
             color={MUTED}
@@ -279,7 +279,7 @@ export function PasswordReset() {
             }}
           >
             <Paragraph
-              html={`<a href="#" style="color:${LINK};word-break:break-all;font-family:'Fira Code',monospace;font-size:12px;">https://abc.app/reset-password?token=eyJhbGci…Xk8Qw</a>`}
+              html={`<a href="#" style="color:${LINK};word-break:break-all;font-family:'Fira Code',monospace;font-size:12px;">https://Emailki.app/reset-password?token=eyJhbGci…Xk8Qw</a>`}
               fontSize="12px"
               color={LINK}
               textAlign="left"
@@ -511,7 +511,7 @@ export function PasswordReset() {
       <Row layout={ColumnLayouts.OneColumn} padding="4px 48px 4px 48px">
         <Column>
           <Paragraph
-            html={serifBody("© 2025 abc. All rights reserved.", SUBTLE)}
+            html={serifBody("© 2025 Emailki. All rights reserved.", SUBTLE)}
             fontSize="12px"
             color={SUBTLE}
             textAlign="center"

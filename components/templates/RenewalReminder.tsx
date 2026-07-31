@@ -57,7 +57,7 @@ export function RenewalReminder() {
       contentWidth="600px"
       contentAlign="center"
       fontFamily={serifFont}
-      previewText="Your abc subscription renews in 7 days — $29.00 on Aug 13, 2025."
+      previewText="Your Emailki subscription renews in 7 days — $29.00 on Aug 13, 2025."
     >
 
       {/* ── 1. WARM AMBER TOP STRIPE ────────────────────────────────────────── */}
@@ -68,7 +68,7 @@ export function RenewalReminder() {
       >
         <Column>
           <Paragraph
-            html={`<b style="color:${WHITE}">Renewal reminder</b> <span style="color:#fde68a"> — your abc Pro subscription renews in 7 days.</span>`}
+            html={`<b style="color:${WHITE}">Renewal reminder</b> <span style="color:#fde68a"> — your Emailki Pro subscription renews in 7 days.</span>`}
             fontSize="13px"
             color={WHITE}
             textAlign="center"
@@ -87,7 +87,7 @@ export function RenewalReminder() {
         <Column padding="0px">
           <Heading
             headingType="h2"
-            text="abc"
+            text="Emailki"
             fontSize="24px"
             fontWeight={900}
             color={INK}
@@ -216,7 +216,7 @@ export function RenewalReminder() {
           <Paragraph html="Plan" fontSize="13px" color={MUTED_FG} lineHeight="140%" fontFamily={sansFont} />
         </Column>
         <Column padding="13px 0px" border={{ borderBottomWidth: "1px", borderBottomStyle: "solid", borderBottomColor: BORDER }}>
-          <Paragraph html={`<b style="color:${PRIMARY}">abc Pro — Monthly</b>`} fontSize="13px" color={PRIMARY} textAlign="right" lineHeight="140%" fontFamily={sansFont} />
+          <Paragraph html={`<b style="color:${PRIMARY}">Emailki Pro — Monthly</b>`} fontSize="13px" color={PRIMARY} textAlign="right" lineHeight="140%" fontFamily={sansFont} />
         </Column>
       </Row>
 
@@ -461,7 +461,7 @@ export function RenewalReminder() {
       </Row>
       <Row layout={ColumnLayouts.OneColumn} padding="4px 40px 4px 40px">
         <Column>
-          <Paragraph html="© 2025 abc. All rights reserved." fontSize="12px" color={SUBTLE} textAlign="center" lineHeight="150%" fontFamily={sansFont} />
+          <Paragraph html="© 2025 Emailki. All rights reserved." fontSize="12px" color={SUBTLE} textAlign="center" lineHeight="150%" fontFamily={sansFont} />
         </Column>
       </Row>
       <Row layout={ColumnLayouts.ThreeEqual} padding="4px 40px 32px 40px">

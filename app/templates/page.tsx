@@ -2,16 +2,11 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { renderToHtml } from "@unlayer/react-elements";
 import { EmailWorkbench } from "@/components/EmailWorkbench";
-import { Changelog } from "@/components/templates/Changelog";
-import { CustomerFeedback } from "@/components/templates/CustomerFeedback";
 import { Invoice } from "@/components/templates/Invoice";
 import { MagicLink } from "@/components/templates/MagicLink";
-import { NPSSurvey } from "@/components/templates/NPSSurvey";
 import { PasswordReset } from "@/components/templates/PasswordReset";
 import { PaymentFailed } from "@/components/templates/PaymentFailed";
 import { PaymentSuccessful } from "@/components/templates/PaymentSuccessful";
-import { ReferralInvitation } from "@/components/templates/ReferralInvitation";
-import { ReferralReward } from "@/components/templates/ReferralReward";
 import { SubscriptionActivated } from "@/components/templates/SubscriptionActivated";
 import { TrialEnding } from "@/components/templates/TrialEnding";
 import { TrialExpired } from "@/components/templates/TrialExpired";
@@ -24,6 +19,7 @@ import { Receipt } from "@/components/templates/Receipt";
 import { DownloadConfirmation } from "@/components/templates/DownloadConfirmation";
 import { AccountDeleted } from "@/components/templates/AccountDeleted";
 import { EmailChanged } from "@/components/templates/EmailChanged";
+import { Changelog } from "@/components/templates/Changelog";
 
 const templateRegistry = [
   { id: "welcome", name: "Welcome", file: "Welcome.tsx", component: Welcome },
@@ -89,24 +85,6 @@ const templateRegistry = [
     component: SubscriptionActivated,
   },
   {
-    id: "referral-invitation",
-    name: "Referral Invitation",
-    file: "ReferralInvitation.tsx",
-    component: ReferralInvitation,
-  },
-  {
-    id: "referral-reward",
-    name: "Referral Reward",
-    file: "ReferralReward.tsx",
-    component: ReferralReward,
-  },
-  {
-    id: "nps-survey",
-    name: "NPS Survey",
-    file: "NPSSurvey.tsx",
-    component: NPSSurvey,
-  },
-  {
     id: "renewal-reminder",
     name: "Renewal Reminder",
     file: "RenewalReminder.tsx",
@@ -137,17 +115,11 @@ const templateRegistry = [
     component: Receipt,
   },
   {
-    id: "customer-feedback",
-    name: "Customer Feedback",
-    file: "CustomerFeedback.tsx",
-    component: CustomerFeedback,
-  },
-  {
     id: "changelog",
     name: "Changelog",
     file: "Changelog.tsx",
     component: Changelog,
-  },
+  }
 ];
 
 async function readTemplateSource(file: string) {

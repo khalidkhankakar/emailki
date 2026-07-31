@@ -58,7 +58,7 @@ export function VerifyEmail() {
       contentWidth="600px"
       contentAlign="center"
       fontFamily={fontSans}
-      previewText="Your abc verification code — expires in 10 minutes."
+      previewText="Your Emailki verification code — expires in 10 minutes."
     >
 
       {/* ── 1. TOP ACCENT BAR (4px amber strip) ─────────────────────────── */}
@@ -77,7 +77,7 @@ export function VerifyEmail() {
         <Column>
           <Heading
             headingType="h2"
-            text="abc"
+            text="Emailki"
             fontSize="30px"
             fontWeight={700}
             color={BRAND}
@@ -130,7 +130,7 @@ export function VerifyEmail() {
           />
           <Paragraph
             html={body(
-              `Hi there! Thanks for signing up. Please use the code below to verify your email address and activate your ${bold("abc")} account.`
+              `Hi there! Thanks for signing up. Please use the code below to verify your email address and activate your ${bold("Emailki")} account.`
             )}
             fontSize="15px"
             color={MUTED}
@@ -270,7 +270,7 @@ export function VerifyEmail() {
         { label: "REQUESTED AT",  value: "Jul 22, 2025 · 10:34 AM" },
         { label: "EXPIRES AT",    value: "Jul 22, 2025 · 10:44 AM" },
         { label: "DEVICE",        value: "Chrome on macOS" },
-        { label: "LOCATION",      value: "Faisalabad, PK" },
+        { label: "LOCATION",      value: "KSF, PK" },
       ].map((item, idx) => (
         <Row
           key={item.label}
@@ -339,7 +339,7 @@ export function VerifyEmail() {
         >
           <Paragraph
             html={body(
-              `${bold("Didn't request this?")} If you didn't create an abc account, you can safely ignore this email. If you're concerned, <a href="#" style="color:${LINK};text-decoration:none;border-bottom:1px solid ${LINK};padding-bottom:1px;">contact our support team</a>.`
+              `${bold("Didn't request this?")} If you didn't create an Emailki account, you can safely ignore this email. If you're concerned, <a href="#" style="color:${LINK};text-decoration:none;border-bottom:1px solid ${LINK};padding-bottom:1px;">contact our support team</a>.`
             )}
             fontSize="14px"
             color={MUTED}
@@ -381,7 +381,7 @@ export function VerifyEmail() {
       <Row layout={ColumnLayouts.OneColumn} padding="4px 48px 4px 48px">
         <Column>
           <Paragraph
-            html={body("© 2025 abc. All rights reserved.", SUBTLE)}
+            html={body("© 2025 Emailki. All rights reserved.", SUBTLE)}
             fontSize="12px"
             color={SUBTLE}
             textAlign="center"

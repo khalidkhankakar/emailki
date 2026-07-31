@@ -56,7 +56,7 @@ export function DownloadConfirmation() {
       contentWidth="600px"
       contentAlign="center"
       fontFamily={serifFont}
-      previewText="Your download is ready — abc-data-export.zip · 24.3 MB · link expires in 24 hours."
+      previewText="Your download is ready — Emailki-data-export.zip · 24.3 MB · link expires in 24 hours."
     >
 
       {/* ── 1. GREEN CONFIRMED BANNER ────────────────────────────────────────── */}
@@ -93,7 +93,7 @@ export function DownloadConfirmation() {
       {/* ── 2. HEADER ───────────────────────────────────────────────────────── */}
       <Row layout={ColumnLayouts.TwoEqual} backgroundColor={WHITE} padding="24px 40px 20px 40px">
         <Column padding="0px">
-          <Heading headingType="h2" text="abc" fontSize="22px" fontWeight={900} color={INK} textAlign="left" lineHeight="1.2" letterSpacing="0.02em" fontFamily={sansFont} />
+          <Heading headingType="h2" text="Emailki" fontSize="22px" fontWeight={900} color={INK} textAlign="left" lineHeight="1.2" letterSpacing="0.02em" fontFamily={sansFont} />
         </Column>
         <Column padding="4px 0px 0px 0px">
           <Paragraph
@@ -144,7 +144,7 @@ export function DownloadConfirmation() {
           <Paragraph html="File name" fontSize="13px" color={MUTED_FG} lineHeight="140%" fontFamily={sansFont} />
         </Column>
         <Column padding="13px 0px" border={{ borderBottomWidth: "1px", borderBottomStyle: "solid", borderBottomColor: BORDER }}>
-          <Paragraph html={`<b style="color:${INK}">abc-data-export.zip</b>`} fontSize="13px" color={INK} textAlign="right" lineHeight="140%" fontFamily={sansFont} />
+          <Paragraph html={`<b style="color:${INK}">Emailki-data-export.zip</b>`} fontSize="13px" color={INK} textAlign="right" lineHeight="140%" fontFamily={sansFont} />
         </Column>
       </Row>
 
@@ -214,7 +214,7 @@ export function DownloadConfirmation() {
             textAlign="center"
             fontFamily={sansFont}
           >
-            ↓ Download abc-data-export.zip
+            ↓ Download Emailki-data-export.zip
           </Button>
         </Column>
       </Row>
@@ -232,7 +232,7 @@ export function DownloadConfirmation() {
           />
           <Column backgroundColor={MUTED} borderRadius="4px" padding="10px 14px">
             <Paragraph
-              html={`<a href="#" style="color:${LINK}; word-break:break-all; font-size:12px;">https://abc.app/downloads?token=dl_eyJhbGci…9sX2lk</a>`}
+              html={`<a href="#" style="color:${LINK}; word-break:break-all; font-size:12px;">https://Emailki.app/downloads?token=dl_eyJhbGci…9sX2lk</a>`}
               fontSize="12px"
               color={LINK}
               textAlign="left"
@@ -291,7 +291,7 @@ export function DownloadConfirmation() {
       </Row>
       <Row layout={ColumnLayouts.OneColumn} padding="20px 40px 4px 40px">
         <Column>
-          <Paragraph html="© 2025 abc. All rights reserved." fontSize="12px" color={SUBTLE} textAlign="center" lineHeight="150%" fontFamily={sansFont} />
+          <Paragraph html="© 2025 Emailki. All rights reserved." fontSize="12px" color={SUBTLE} textAlign="center" lineHeight="150%" fontFamily={sansFont} />
         </Column>
       </Row>
       <Row layout={ColumnLayouts.ThreeEqual} padding="8px 40px 32px 40px">
